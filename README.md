@@ -1,15 +1,22 @@
 # 🐍 Data Structures and Algorithms in Python
 
 This repository is my personal collection of **Data Structures and Algorithms (DSA)** problems solved in **Python**.  
-Right now, it includes problems from **Arrays, Strings, and Linked Lists**, and I’ll keep expanding it as I practice more topics.
+Right now, it includes problems from **Arrays, Strings, Linked Lists and Stack**, and I’ll keep expanding it as I practice more topics.
 
 ---
 
 ## 📂 Repository Structure
+
 Data-Structures-and-Algorithms/
- ├── Arrays/ 
- ├── Strings/ 
- └── LinkedList/
+├── Arrays/
+├── Strings/
+├── LinkedList/
+├── Stack/
+├── Hash Tables/
+├── Bit Manipulation/
+├── Maths/
+├── Two Pointers/
+└── README.md
 
 
 Each folder contains Python solutions to problems related to that topic.
@@ -27,8 +34,11 @@ Each folder contains Python solutions to problems related to that topic.
 - Arrays
 - Strings
 - Linked Lists
+- Stacks
+- Hash Tables
+- Maths
 
-*(More topics like Stacks, Queues, Trees, Graphs, and Dynamic Programming will be added soon!)*
+*(More topics like Queues, Trees, Graphs, and Dynamic Programming will be added soon!)*
 
 ---
 
