@@ -6,7 +6,7 @@ Right now, it includes problems from **Arrays, Strings, Linked Lists and Stack**
 ---
 
 ## 📂 Repository Structure
-
+```
 Data-Structures-and-Algorithms/
 ├── Arrays/
 ├── Strings/
@@ -17,7 +17,7 @@ Data-Structures-and-Algorithms/
 ├── Maths/
 ├── Two Pointers/
 └── README.md
-
+```
 
 Each folder contains Python solutions to problems related to that topic.
 
