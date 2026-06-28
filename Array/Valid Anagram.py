@@ -31,4 +31,36 @@ class Solution(object):
                 return False
         return True
 
+# -- Optimal Solution -----
+
+## O(n) time complexity and O(1) space complexity
+class Solution(object):
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+
+        dict1 = {}
+        if(len(s)!=len(t)):
+            return False
+
+        for i in s:
+            if i not in dict1:
+                dict1[i] = 1
+            else:
+                x = dict1[i] + 1
+                dict1[i] = x
+
+        for i in t:
+            if i not in dict1:
+                return False
+            else:
+                x= dict1[i]
+                dict1[i] = x - 1
+                if(dict1[i] <0):
+                    return False
+        return True
+        
         

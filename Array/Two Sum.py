@@ -23,3 +23,23 @@ input = [3,2,3]
 target = 6
 ans = TwoSum(input,target)
 print(ans)
+
+
+
+
+#----- Optimal Solution -----
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        dict1 = {}
+        for i in range(0, len(nums)):
+            x = target - nums[i]
+            if(x in dict1):
+                return [i,dict1[x]]
+            else:
+                dict1[nums[i]] = i
+        
