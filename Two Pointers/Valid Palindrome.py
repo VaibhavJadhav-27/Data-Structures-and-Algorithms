@@ -68,4 +68,33 @@ class Solution(object):
         return True
 
 
+#------------------ optimized approach -----------------------------
+class Solution(object):
+    def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        i=0
+        j=len(s)-1
+        x=s.lower()
+        while(i<j):
+            if(not x[i].isalnum()):
+                i=i+1
+                continue
+                
+            if(not x[j].isalnum()):
+                j=j-1
+                continue
+                
+            if(x[i]!=x[j]):
+                return False
+            i=i+1
+            j=j-1
+
+        return True
+
+
+
+
 
