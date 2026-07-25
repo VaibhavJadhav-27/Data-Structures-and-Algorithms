@@ -36,37 +36,28 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        # stack = []
-        # pointer = -1
-        # if(len(s)%2 !=0):
-        #     return False
-        # for i in s:
-        #     if(i in ('(', '{','[')):
-        #         stack.append(i)
-        #         pointer=pointer +1
-        #         print(pointer)
-        #     elif(i in (')', '}',']') and pointer ==-1):
-        #         return False
-        #     elif(i==')' and stack[pointer]!='('):
-        #         return False
-        #     elif(i=='}' and stack[pointer]!='{'):
-        #         return False
-        #     elif(i==']' and stack[pointer]!='['):
-        #         return False
-        #     elif(i==')' and stack[pointer]=='('):
-        #         stack.pop()
-        #         pointer=pointer - 1
-        #     elif(i=='}' and stack[pointer]=='{'):
-        #         stack.pop()
-        #         pointer=pointer - 1
-        #     elif(i==']' and stack[pointer]=='['):
-        #         stack.pop()
-        #         pointer=pointer - 1
-        # if(len(stack)>0):
-        #     return False
-        # else:
-        #     return True
+        stack = []
+        for i in s:
+            if(i=='(' or i=='{' or i=='['):
+                stack.append(i)
+            elif(i==')' and len(stack)>0 and stack[-1]=='('):
+                stack.pop()
+            elif(i==']' and len(stack)>0 and stack[-1]=='['):
+                stack.pop()
+            elif(i=='}' and len(stack)>0 and stack[-1]=='{'):
+                stack.pop()
+            else:
+                return False
+        return len(stack)==0
 
+# -------- Approach 2 -----------------
+
+class Solution(object):
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
         stack = []
         pairs = {')': '(', '}': '{', ']': '['}
 

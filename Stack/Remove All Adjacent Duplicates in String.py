@@ -23,26 +23,28 @@
 #  *******************************************************************
 
 class Solution(object):
-    def removeDuplicates(self, s):
+    def calPoints(self, operations):
         """
-        :type s: str
-        :rtype: str
+        :type operations: List[str]
+        :rtype: int
         """
-        if(len(s)<1):
-            return ""
         stack = []
-        stack.append(s[0])
-        p =0
-        if len(s)==1:
-            return s
-        for i in range(1,len(s)):
-            if(p>=0 and s[i] == stack[p]):
+        add = 0
+        for i in operations:
+            if(i not in ["+","C","D"]):
+                stack.append(int(i))
+                add = add + int(i)
+                
+            elif(i=="+"):
+                sum_of_two_scores = stack[-1] + stack[-2]
+                add = add + sum_of_two_scores
+                stack.append(sum_of_two_scores)
+
+            elif(i=="D"):
+                add = add + (stack[-1]*2)
+                stack.append((stack[-1]*2))
+
+            elif(i=="C"):
+                add = add - stack[-1]
                 stack.pop()
-                p=p-1
-            elif(p<0):
-                stack.append(s[i])
-                p=p+1
-            elif(p>=0 and s[i] != stack[p]):
-                stack.append(s[i])
-                p=p+1
-        return "".join(stack)
+        return add
