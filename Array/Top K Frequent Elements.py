@@ -36,3 +36,28 @@ class Solution(object):
             ans.append(max_key)
             nums_count.pop(max_key)
         return ans
+    
+
+
+# ---------------Heap solution-------------------
+
+import heapq
+class Solution(object):
+    def topKFrequent(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+        heap = []
+        for i in set(nums):
+            occurrences =  nums.count(i)
+            heapq.heappush(heap, (occurrences,i))
+        
+        while(len(heap)>k):
+            heapq.heappop(heap)
+        ans=[]
+        for i in range(0,k):
+            occ,num = heapq.heappop(heap)
+            ans.append(num)
+        return ans
