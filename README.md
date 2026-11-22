@@ -1,6 +1,6 @@
 # 🐍 Data Structures and Algorithms in Python
 
-This repository is my personal collection of **LeetCode problems solved in Python**. It currently contains **100 solutions** across **15 topic folders**, and I’ll keep expanding it as I practice more topics.
+This repository is my personal collection of **LeetCode problems and Python reference files**. It currently contains **101 problem files** across **15 topic folders**, and I’ll keep expanding it as I practice more topics.
 
 ---
 
@@ -13,7 +13,7 @@ Data-Structures-and-Algorithms/
 ├── Bit Manipulation/       # 1 solution
 ├── Graphs/                 # 9 solutions
 ├── Hash Tables/            # 6 solutions
-├── Heaps/                  # 3 solutions
+├── Heaps/                  # 4 problem files
 ├── Linked List/            # 5 solutions
 ├── Maths/                  # 1 solution
 ├── Prefix Sum/             # 4 solutions
@@ -30,7 +30,7 @@ Data-Structures-and-Algorithms/
 └── README.md
 ```
 
-Each topic folder contains Python solutions related to that data structure or algorithm. Counts reflect the current repository and will change as solutions are added.
+Each topic folder contains Python files related to that data structure or algorithm. Most include solution code; files created by the Copilot problem builder are comment-only references. Counts reflect the current repository and will change as files are added.
 
 ---
 
@@ -49,7 +49,7 @@ Each topic folder contains Python solutions related to that data structure or al
 - Bit Manipulation (1)
 - Graphs (9)
 - Hash Tables (6)
-- Heaps (3)
+- Heaps (4)
 - Linked List (5)
 - Maths (1)
 - Prefix Sum (4)
@@ -96,7 +96,7 @@ Select **LeetCode Problem Builder** in Copilot Chat, then run the skill with a L
 /add-leetcode-problem Top K Frequent Elements -n 347
 ```
 
-The skill verifies problem details against LeetCode, chooses a suitable topic folder, and avoids overwriting an existing solution. Review and test generated code before using it.
+The skill verifies problem details against LeetCode, chooses a suitable topic folder, and avoids overwriting an existing problem file. It creates a comment-only reference with a paraphrase of the introductory problem context (one sentence per line), sample inputs and outputs, and a paraphrased sample explanation when LeetCode provides one. It does not generate a solution.
 
 ---
 

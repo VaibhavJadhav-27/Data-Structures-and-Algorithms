@@ -58,7 +58,7 @@ In VS Code Copilot Chat, select **LeetCode Problem Builder** and run the workspa
 /add-leetcode-problem Top K Frequent Elements -n 347
 ```
 
-The skill verifies the problem on LeetCode and will not overwrite an existing solution. Review and test generated code before submitting it. See [the skill instructions](./.github/skills/add-leetcode-problem/SKILL.md).
+The skill verifies the problem on LeetCode and will not overwrite an existing problem file. It creates a comment-only reference with the introductory problem context paraphrased one sentence per line, sample inputs and outputs, and a paraphrased sample explanation when LeetCode provides one. It does not generate solution code. See [the skill instructions](./.github/skills/add-leetcode-problem/SKILL.md).
 
 ---
 
